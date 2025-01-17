@@ -3,8 +3,8 @@ package Practice;
 public class Basic {
     public static void main(String[] args) {
         // 1. Variables and Data Types
-        String name = "Alice";  // String input
-        int age = 25;           // Integer input
+        String name = "Kavi";  // String input
+        int age = 21;           // Integer input
 
         System.out.println("\nHello, " + name + "!");
         
