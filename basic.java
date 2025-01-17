@@ -1,14 +1,10 @@
-import java.util.Scanner;
+package Practice;
 
-class JavaImportantTopics {
+public class Basic {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
         // 1. Variables and Data Types
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine(); // String input
-        System.out.print("Enter your age: ");
-        int age = scanner.nextInt(); // Integer input
+        String name = "Alice";  // String input
+        int age = 25;           // Integer input
 
         System.out.println("\nHello, " + name + "!");
         
@@ -26,48 +22,35 @@ class JavaImportantTopics {
         }
 
         // 4. Arrays
-        System.out.println("\nEnter 3 favorite numbers:");
-        int[] numbers = new int[3];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = scanner.nextInt();
-        }
-        System.out.println("Your favorite numbers are:");
+        int[] numbers = {10, 20, 30};  // Predefined favorite numbers
+        System.out.println("\nYour favorite numbers are:");
         for (int num : numbers) {
             System.out.print(num + " ");
         }
         System.out.println();
 
         // 5. Methods
-        System.out.println("\nEnter two numbers to find their sum:");
-        int num1 = scanner.nextInt();
-        int num2 = scanner.nextInt();
-        System.out.println("The sum is: " + addNumbers(num1, num2));
+        int num1 = 5;
+        int num2 = 7;
+        System.out.println("\nThe sum is: " + addNumbers(num1, num2));
 
         // 6. Classes and Objects
-        System.out.println("\nEnter details of a car:");
-        scanner.nextLine(); // Consume newline
-        System.out.print("Car Brand: ");
-        String brand = scanner.nextLine();
-        System.out.print("Car Year: ");
-        int year = scanner.nextInt();
+        String brand = "Tesla";
+        int year = 2022;
         Car myCar = new Car(brand, year);
         myCar.displayDetails();
 
         // 7. Inheritance and 8. Polymorphism
-        System.out.println("\nInheritance and Polymorphism Example:");
         Animal animal = new Dog("Buddy", "Golden Retriever");
         animal.displayInfo(); // Calls overridden method
 
         // 9. Exception Handling
-        System.out.println("\nEnter a number to divide 100:");
+        int divisor = 5;
         try {
-            int divisor = scanner.nextInt();
-            System.out.println("Result: " + (100 / divisor));
+            System.out.println("\nResult: " + (100 / divisor));
         } catch (ArithmeticException e) {
             System.out.println("Error: Cannot divide by zero.");
         }
-
-        scanner.close();
     }
 
     // 5. Methods
